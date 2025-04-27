@@ -72,6 +72,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jComboBoxCadastroItemCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Material de Expediente", "Material Hospitalar", "Material Permanente" }));
 
         jButtonCadastroItemSalvar.setText("Salvar");
+        jButtonCadastroItemSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroItemSalvarActionPerformed(evt);
+            }
+        });
 
         jButtonCadastroItemCancelar.setText("Cancelar");
         jButtonCadastroItemCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -267,6 +272,38 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jComboBoxCadastroItemCategoria.setSelectedIndex(0);
         jInternalFrameCadastroItem.setVisible(false);
     }//GEN-LAST:event_jButtonCadastroItemCancelarActionPerformed
+
+    private void jButtonCadastroItemSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroItemSalvarActionPerformed
+        String nome = jTextFieldCadastroItemNome.getText();
+        int quantidade;
+        
+        if(nome.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "O campo Nome do Item está vazio!");
+        } else {
+            String quantAuxiliar = jTextFieldCadastroItemQuantidade.getText();
+            
+            if(quantAuxiliar.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "O campo Quantidade está vazio!");
+            } else {
+                try {
+                    quantidade = Integer.parseInt(quantAuxiliar);
+                               
+                    String categoria = jComboBoxCadastroItemCategoria.getSelectedItem().toString();
+                    System.out.println(nome+", "+quantidade+", "+categoria);
+
+                    JOptionPane.showMessageDialog(rootPane, "O item "+nome+" foi cadastrado com Sucesso!");
+
+                    jTextFieldCadastroItemNome.setText("");
+                    jTextFieldCadastroItemQuantidade.setText("");
+                    jComboBoxCadastroItemCategoria.setSelectedIndex(0);
+
+                    jInternalFrameCadastroItem.setVisible(false);
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(rootPane, "Insina no campo Quantidade apenas valores inteiros!");
+                }    
+            }
+        }
+    }//GEN-LAST:event_jButtonCadastroItemSalvarActionPerformed
 
     /**
      * @param args the command line arguments

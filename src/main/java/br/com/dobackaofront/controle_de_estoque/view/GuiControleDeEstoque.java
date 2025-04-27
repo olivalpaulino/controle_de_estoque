@@ -26,6 +26,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPaneControleDeEstoque = new javax.swing.JDesktopPane();
+        jInternalFrameCadastroCategoria = new javax.swing.JInternalFrame();
+        jLabelCadastroCategoriaNome = new javax.swing.JLabel();
+        jTextFieldCadastroCategoriaNome = new javax.swing.JTextField();
+        jButtonCadastroCategoriaSalvar = new javax.swing.JButton();
+        jButtonCadastroCategoriaCancelar = new javax.swing.JButton();
         jMenuBarControleDeEstoque = new javax.swing.JMenuBar();
         jMenuControleDeEstoqueCadastro = new javax.swing.JMenu();
         jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
@@ -38,6 +44,59 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 400));
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+
+        jInternalFrameCadastroCategoria.setTitle("Cadastro de Categoria");
+        jInternalFrameCadastroCategoria.setVisible(true);
+
+        jLabelCadastroCategoriaNome.setText("Nome da Categoria:");
+
+        jButtonCadastroCategoriaSalvar.setText("Salvar");
+
+        jButtonCadastroCategoriaCancelar.setText("Cancelar");
+
+        javax.swing.GroupLayout jInternalFrameCadastroCategoriaLayout = new javax.swing.GroupLayout(jInternalFrameCadastroCategoria.getContentPane());
+        jInternalFrameCadastroCategoria.getContentPane().setLayout(jInternalFrameCadastroCategoriaLayout);
+        jInternalFrameCadastroCategoriaLayout.setHorizontalGroup(
+            jInternalFrameCadastroCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameCadastroCategoriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelCadastroCategoriaNome)
+                .addGap(18, 18, 18)
+                .addComponent(jTextFieldCadastroCategoriaNome, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrameCadastroCategoriaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonCadastroCategoriaSalvar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonCadastroCategoriaCancelar)
+                .addGap(2, 2, 2))
+        );
+        jInternalFrameCadastroCategoriaLayout.setVerticalGroup(
+            jInternalFrameCadastroCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameCadastroCategoriaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrameCadastroCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCadastroCategoriaNome)
+                    .addComponent(jTextFieldCadastroCategoriaNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
+                .addGroup(jInternalFrameCadastroCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonCadastroCategoriaSalvar)
+                    .addComponent(jButtonCadastroCategoriaCancelar))
+                .addContainerGap())
+        );
+
+        jDesktopPaneControleDeEstoque.setLayer(jInternalFrameCadastroCategoria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPaneControleDeEstoqueLayout = new javax.swing.GroupLayout(jDesktopPaneControleDeEstoque);
+        jDesktopPaneControleDeEstoque.setLayout(jDesktopPaneControleDeEstoqueLayout);
+        jDesktopPaneControleDeEstoqueLayout.setHorizontalGroup(
+            jDesktopPaneControleDeEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jInternalFrameCadastroCategoria)
+        );
+        jDesktopPaneControleDeEstoqueLayout.setVerticalGroup(
+            jDesktopPaneControleDeEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jInternalFrameCadastroCategoria)
+        );
 
         jMenuControleDeEstoqueCadastro.setText("Cadastro");
 
@@ -58,11 +117,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jDesktopPaneControleDeEstoque)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(jDesktopPaneControleDeEstoque)
         );
 
         pack();
@@ -104,10 +163,16 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonCadastroCategoriaCancelar;
+    private javax.swing.JButton jButtonCadastroCategoriaSalvar;
+    private javax.swing.JDesktopPane jDesktopPaneControleDeEstoque;
+    private javax.swing.JInternalFrame jInternalFrameCadastroCategoria;
+    private javax.swing.JLabel jLabelCadastroCategoriaNome;
     private javax.swing.JMenuBar jMenuBarControleDeEstoque;
     private javax.swing.JMenu jMenuControleDeEstoqueCadastro;
     private javax.swing.JMenu jMenuControleDeEstoqueEdicao;
     private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroCategoria;
     private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroItem;
+    private javax.swing.JTextField jTextFieldCadastroCategoriaNome;
     // End of variables declaration//GEN-END:variables
 }

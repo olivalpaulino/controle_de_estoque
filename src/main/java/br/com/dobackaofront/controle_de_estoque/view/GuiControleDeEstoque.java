@@ -25,6 +25,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameEdicaoItem.setVisible(false);
         jInternalFrameEdicaoCategoria.setVisible(false);
         jInternalFrameApresentacao.setVisible(false);
+        jInternalFrameDispensacao.setVisible(false);
     }
 
     /**
@@ -88,6 +89,25 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jComboBoxApresentacaoOpcao = new javax.swing.JComboBox<>();
         jButtonApresentacaoConfirmar = new javax.swing.JButton();
         ApresentacaoCancelar = new javax.swing.JButton();
+        jInternalFrameDispensacao = new javax.swing.JInternalFrame();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
         jMenuBarControleDeEstoque = new javax.swing.JMenuBar();
         jMenuControleDeEstoqueCadastro = new javax.swing.JMenu();
         jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
@@ -362,6 +382,63 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameApresentacao.getContentPane().add(ApresentacaoCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
 
         jDesktopPaneControleDeEstoque.add(jInternalFrameApresentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 550, 350));
+
+        jInternalFrameDispensacao.setTitle("Dispensação");
+        jInternalFrameDispensacao.setMaximumSize(new java.awt.Dimension(580, 370));
+        jInternalFrameDispensacao.setMinimumSize(new java.awt.Dimension(580, 370));
+        jInternalFrameDispensacao.setPreferredSize(new java.awt.Dimension(580, 370));
+        jInternalFrameDispensacao.setVisible(true);
+        jInternalFrameDispensacao.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Nome do Item:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        jTextField1.setEditable(false);
+        jInternalFrameDispensacao.getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, -1));
+
+        jLabel2.setText("Quantidade Atual em Estoque: ");
+        jInternalFrameDispensacao.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+
+        jTextField2.setEditable(false);
+        jInternalFrameDispensacao.getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 90, -1));
+
+        jLabel3.setText("Opção:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adicionar no Estoque", "Dispensar do Estoque" }));
+        jInternalFrameDispensacao.getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
+
+        jLabel4.setText("Informe a Quantidade:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        jInternalFrameDispensacao.getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 80, -1));
+
+        jButton1.setText("Confirmar");
+        jInternalFrameDispensacao.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
+
+        jButton2.setText("Cancelar");
+        jInternalFrameDispensacao.getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, -1, -1));
+
+        jLabel5.setText("Data Atual:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+
+        jTextField4.setEditable(false);
+        jInternalFrameDispensacao.getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 110, -1));
+
+        jLabel6.setText("Origem/Destino:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        jInternalFrameDispensacao.getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 180, -1));
+
+        jLabel7.setText("ID:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+
+        jTextField6.setEditable(false);
+        jInternalFrameDispensacao.getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
+
+        jLabel8.setText("Responsável:");
+        jInternalFrameDispensacao.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jInternalFrameDispensacao.getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 150, -1));
+
+        jDesktopPaneControleDeEstoque.add(jInternalFrameDispensacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 580, 370));
 
         getContentPane().add(jDesktopPaneControleDeEstoque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 370));
 
@@ -750,6 +827,8 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ApresentacaoCancelar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonApresentacaoConfirmar;
     private javax.swing.JButton jButtonCadastroCategoriaCancelar;
     private javax.swing.JButton jButtonCadastroCategoriaSalvar;
@@ -763,6 +842,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JButton jButtonPesquisarCategoriaSalvar;
     private javax.swing.JButton jButtonPesquisarItemCancelar;
     private javax.swing.JButton jButtonPesquisarItemSalvar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBoxApresentacaoOpcao;
     private javax.swing.JComboBox<String> jComboBoxCadastroItemCategoria;
     private javax.swing.JComboBox<String> jComboBoxEdicaoItemCategoria;
@@ -770,10 +850,19 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jInternalFrameApresentacao;
     private javax.swing.JInternalFrame jInternalFrameCadastroCategoria;
     private javax.swing.JInternalFrame jInternalFrameCadastroItem;
+    private javax.swing.JInternalFrame jInternalFrameDispensacao;
     private javax.swing.JInternalFrame jInternalFrameEdicaoCategoria;
     private javax.swing.JInternalFrame jInternalFrameEdicaoItem;
     private javax.swing.JInternalFrame jInternalFramePesquisarCategoria;
     private javax.swing.JInternalFrame jInternalFramePesquisarItem;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabelApresentacaoId;
     private javax.swing.JLabel jLabelApresentacaoOpcao;
     private javax.swing.JLabel jLabelCadastroCategoriaNome;
@@ -800,6 +889,13 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuPesquisar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableApresentacao;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextFieldApresentacaoId;
     private javax.swing.JTextField jTextFieldCadastroCategoriaNome;
     private javax.swing.JTextField jTextFieldCadastroItemNome;

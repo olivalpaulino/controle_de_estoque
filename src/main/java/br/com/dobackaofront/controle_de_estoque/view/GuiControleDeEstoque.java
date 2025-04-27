@@ -26,12 +26,33 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBarControleDeEstoque = new javax.swing.JMenuBar();
+        jMenuControleDeEstoqueCadastro = new javax.swing.JMenu();
+        jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
+        jMenuItemControleDeEstoqueCadastroItem = new javax.swing.JMenuItem();
+        jMenuControleDeEstoqueEdicao = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Controle de Estoque");
         setMaximumSize(new java.awt.Dimension(600, 400));
         setMinimumSize(new java.awt.Dimension(600, 400));
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+
+        jMenuControleDeEstoqueCadastro.setText("Cadastro");
+
+        jMenuItemControleDeEstoqueCadastroCategoria.setText("Categoria");
+        jMenuControleDeEstoqueCadastro.add(jMenuItemControleDeEstoqueCadastroCategoria);
+
+        jMenuItemControleDeEstoqueCadastroItem.setText("Item");
+        jMenuControleDeEstoqueCadastro.add(jMenuItemControleDeEstoqueCadastroItem);
+
+        jMenuBarControleDeEstoque.add(jMenuControleDeEstoqueCadastro);
+
+        jMenuControleDeEstoqueEdicao.setText("Edição");
+        jMenuBarControleDeEstoque.add(jMenuControleDeEstoqueEdicao);
+
+        setJMenuBar(jMenuBarControleDeEstoque);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -41,7 +62,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 277, Short.MAX_VALUE)
         );
 
         pack();
@@ -83,5 +104,10 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBarControleDeEstoque;
+    private javax.swing.JMenu jMenuControleDeEstoqueCadastro;
+    private javax.swing.JMenu jMenuControleDeEstoqueEdicao;
+    private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroCategoria;
+    private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroItem;
     // End of variables declaration//GEN-END:variables
 }

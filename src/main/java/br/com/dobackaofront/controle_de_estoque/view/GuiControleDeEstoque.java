@@ -80,6 +80,8 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
         jMenuItemControleDeEstoqueCadastroItem = new javax.swing.JMenuItem();
         jMenuControleDeEstoqueEdicao = new javax.swing.JMenu();
+        jMenuItemEdicaoCategoria = new javax.swing.JMenuItem();
+        jMenuItemEdicaoItem = new javax.swing.JMenuItem();
         jMenuPesquisar = new javax.swing.JMenu();
         jMenuItemPesquisarCategoria = new javax.swing.JMenuItem();
         jMenuItemPesquisarItem = new javax.swing.JMenuItem();
@@ -318,6 +320,23 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jMenuBarControleDeEstoque.add(jMenuControleDeEstoqueCadastro);
 
         jMenuControleDeEstoqueEdicao.setText("Edição");
+
+        jMenuItemEdicaoCategoria.setText("Categoria");
+        jMenuItemEdicaoCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEdicaoCategoriaActionPerformed(evt);
+            }
+        });
+        jMenuControleDeEstoqueEdicao.add(jMenuItemEdicaoCategoria);
+
+        jMenuItemEdicaoItem.setText("Item");
+        jMenuItemEdicaoItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEdicaoItemActionPerformed(evt);
+            }
+        });
+        jMenuControleDeEstoqueEdicao.add(jMenuItemEdicaoItem);
+
         jMenuBarControleDeEstoque.add(jMenuControleDeEstoqueEdicao);
 
         jMenuPesquisar.setText("Pesquisa");
@@ -449,6 +468,48 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonEdicaoCategoriaCancelarActionPerformed
 
+    private void jMenuItemEdicaoCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEdicaoCategoriaActionPerformed
+        // TODO add your handling code here:
+        jTextFieldCadastroCategoriaNome.setText("");
+        jInternalFrameCadastroCategoria.setVisible(false);
+        
+        resetCadastroItem();
+        jInternalFrameCadastroItem.setVisible(false);
+        
+        jTextFieldPesquisarCategoriaNome.setText("");
+        jInternalFramePesquisarCategoria.setVisible(false);
+        
+        jTextFieldPesquisarItemNome.setText("");
+        jInternalFramePesquisarItem.setVisible(false);
+        
+        resetEdicaoItem();
+        jInternalFrameEdicaoItem.setVisible(false);
+        
+        jInternalFrameEdicaoCategoria.setVisible(true);
+    }//GEN-LAST:event_jMenuItemEdicaoCategoriaActionPerformed
+
+    private void jMenuItemEdicaoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEdicaoItemActionPerformed
+        // TODO add your handling code here:
+        jTextFieldCadastroCategoriaNome.setText("");
+        jInternalFrameCadastroCategoria.setVisible(false);
+        
+        resetCadastroItem();
+        jInternalFrameCadastroItem.setVisible(false);
+        
+        jTextFieldPesquisarCategoriaNome.setText("");
+        jInternalFramePesquisarCategoria.setVisible(false);
+        
+        jTextFieldPesquisarItemNome.setText("");
+        jInternalFramePesquisarItem.setVisible(false);
+        
+        jTextFieldEdicaoCategoriaNome.setText("");
+        jInternalFrameEdicaoCategoria.setVisible(false);
+        
+        jInternalFrameEdicaoItem.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jMenuItemEdicaoItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -532,6 +593,13 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jTextFieldCadastroItemQuantidade.setText("");
         jComboBoxCadastroItemCategoria.setSelectedIndex(0);
     }
+    
+    public void resetEdicaoItem() {
+        jTextFieldEdicaoItemId.setText("");
+        jTextFieldEdicaoItemNome.setText("");
+        jTextFieldEdicaoItemQuantidade.setText("");
+        jComboBoxEdicaoItemCategoria.setSelectedIndex(0);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastroCategoriaCancelar;
@@ -571,6 +639,8 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuControleDeEstoqueEdicao;
     private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroCategoria;
     private javax.swing.JMenuItem jMenuItemControleDeEstoqueCadastroItem;
+    private javax.swing.JMenuItem jMenuItemEdicaoCategoria;
+    private javax.swing.JMenuItem jMenuItemEdicaoItem;
     private javax.swing.JMenuItem jMenuItemPesquisarCategoria;
     private javax.swing.JMenuItem jMenuItemPesquisarItem;
     private javax.swing.JMenu jMenuPesquisar;

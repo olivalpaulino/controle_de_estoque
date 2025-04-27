@@ -11,6 +11,6 @@ package br.com.dobackaofront.controle_de_estoque;
 public class Controle_de_estoque {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Obrigado!");
     }
 }

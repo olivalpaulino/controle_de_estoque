@@ -4,6 +4,8 @@
  */
 package br.com.dobackaofront.controle_de_estoque.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Família Santos
@@ -15,6 +17,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
      */
     public GuiControleDeEstoque() {
         initComponents();
+        jInternalFrameCadastroCategoria.setVisible(false);
     }
 
     /**
@@ -51,8 +54,18 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jLabelCadastroCategoriaNome.setText("Nome da Categoria:");
 
         jButtonCadastroCategoriaSalvar.setText("Salvar");
+        jButtonCadastroCategoriaSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroCategoriaSalvarActionPerformed(evt);
+            }
+        });
 
         jButtonCadastroCategoriaCancelar.setText("Cancelar");
+        jButtonCadastroCategoriaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroCategoriaCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrameCadastroCategoriaLayout = new javax.swing.GroupLayout(jInternalFrameCadastroCategoria.getContentPane());
         jInternalFrameCadastroCategoria.getContentPane().setLayout(jInternalFrameCadastroCategoriaLayout);
@@ -101,6 +114,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jMenuControleDeEstoqueCadastro.setText("Cadastro");
 
         jMenuItemControleDeEstoqueCadastroCategoria.setText("Categoria");
+        jMenuItemControleDeEstoqueCadastroCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed(evt);
+            }
+        });
         jMenuControleDeEstoqueCadastro.add(jMenuItemControleDeEstoqueCadastroCategoria);
 
         jMenuItemControleDeEstoqueCadastroItem.setText("Item");
@@ -126,6 +144,24 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed
+        // TODO add your handling code here:
+        jInternalFrameCadastroCategoria.setVisible(true);
+    }//GEN-LAST:event_jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed
+
+    private void jButtonCadastroCategoriaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroCategoriaCancelarActionPerformed
+        // TODO add your handling code here:
+        jTextFieldCadastroCategoriaNome.setText("");
+        jInternalFrameCadastroCategoria.setVisible(false);
+    }//GEN-LAST:event_jButtonCadastroCategoriaCancelarActionPerformed
+
+    private void jButtonCadastroCategoriaSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroCategoriaSalvarActionPerformed
+        // TODO add your handling code here:
+        String nome = jTextFieldCadastroCategoriaNome.getText();
+        
+        validarCadastroCategoria(nome);
+    }//GEN-LAST:event_jButtonCadastroCategoriaSalvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,6 +196,17 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
                 new GuiControleDeEstoque().setVisible(true);
             }
         });
+    }
+    
+    public void validarCadastroCategoria(String nome) {
+        if (nome.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "O campo Nome da Categoria está vazio!");
+        } else {
+            System.out.println("O Nome da categoria é: "+nome);
+            JOptionPane.showMessageDialog(rootPane, "A Categoria: "+nome+" foi cadastrada com Sucesso!");
+            jTextFieldCadastroCategoriaNome.setText("");
+            jInternalFrameCadastroCategoria.setVisible(false);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

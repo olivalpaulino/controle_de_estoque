@@ -20,6 +20,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameCadastroCategoria.setVisible(false);
         jInternalFrameCadastroItem.setVisible(false);
         jInternalFramePesquisarItem.setVisible(false);
+        jInternalFramePesquisarCategoria.setVisible(false);
     }
 
     /**
@@ -38,10 +39,10 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jButtonCadastroCategoriaSalvar = new javax.swing.JButton();
         jButtonCadastroCategoriaCancelar = new javax.swing.JButton();
         jInternalFramePesquisarItem = new javax.swing.JInternalFrame();
-        jLabelPesquisarNome = new javax.swing.JLabel();
-        jTextFieldPesquisarNome = new javax.swing.JTextField();
-        jButtonPesquisarSalvar = new javax.swing.JButton();
-        jButtonPesquisarCancelar = new javax.swing.JButton();
+        jLabelPesquisarItemNome = new javax.swing.JLabel();
+        jTextFieldPesquisarItemNome = new javax.swing.JTextField();
+        jButtonPesquisarItemSalvar = new javax.swing.JButton();
+        jButtonPesquisarItemCancelar = new javax.swing.JButton();
         jInternalFrameCadastroItem = new javax.swing.JInternalFrame();
         jLabelCadastroItemNome = new javax.swing.JLabel();
         jTextFieldCadastroItemNome = new javax.swing.JTextField();
@@ -51,6 +52,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jComboBoxCadastroItemCategoria = new javax.swing.JComboBox<>();
         jButtonCadastroItemSalvar = new javax.swing.JButton();
         jButtonCadastroItemCancelar = new javax.swing.JButton();
+        jInternalFramePesquisarCategoria = new javax.swing.JInternalFrame();
+        jLabelPesquisarCategoriaNome = new javax.swing.JLabel();
+        jTextFieldPesquisarCategoriaNome = new javax.swing.JTextField();
+        jButtonPesquisarCategoriaSalvar = new javax.swing.JButton();
+        jButtonPesquisarCategoriaCancelar = new javax.swing.JButton();
         jMenuBarControleDeEstoque = new javax.swing.JMenuBar();
         jMenuControleDeEstoqueCadastro = new javax.swing.JMenu();
         jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
@@ -107,25 +113,25 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFramePesquisarItem.setVisible(true);
         jInternalFramePesquisarItem.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelPesquisarNome.setText("Informe o Nome do Item:");
-        jInternalFramePesquisarItem.getContentPane().add(jLabelPesquisarNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 9, -1, -1));
-        jInternalFramePesquisarItem.getContentPane().add(jTextFieldPesquisarNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 6, 191, -1));
+        jLabelPesquisarItemNome.setText("Informe o Nome do Item:");
+        jInternalFramePesquisarItem.getContentPane().add(jLabelPesquisarItemNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 9, -1, -1));
+        jInternalFramePesquisarItem.getContentPane().add(jTextFieldPesquisarItemNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 6, 191, -1));
 
-        jButtonPesquisarSalvar.setText("Pesquisar");
-        jButtonPesquisarSalvar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPesquisarItemSalvar.setText("Pesquisar");
+        jButtonPesquisarItemSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPesquisarSalvarActionPerformed(evt);
+                jButtonPesquisarItemSalvarActionPerformed(evt);
             }
         });
-        jInternalFramePesquisarItem.getContentPane().add(jButtonPesquisarSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 71, -1, -1));
+        jInternalFramePesquisarItem.getContentPane().add(jButtonPesquisarItemSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 71, -1, -1));
 
-        jButtonPesquisarCancelar.setText("Cancelar");
-        jButtonPesquisarCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPesquisarItemCancelar.setText("Cancelar");
+        jButtonPesquisarItemCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPesquisarCancelarActionPerformed(evt);
+                jButtonPesquisarItemCancelarActionPerformed(evt);
             }
         });
-        jInternalFramePesquisarItem.getContentPane().add(jButtonPesquisarCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 71, -1, -1));
+        jInternalFramePesquisarItem.getContentPane().add(jButtonPesquisarItemCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 71, -1, -1));
 
         jDesktopPaneControleDeEstoque.add(jInternalFramePesquisarItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 430, 150));
 
@@ -168,6 +174,35 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
         jDesktopPaneControleDeEstoque.add(jInternalFrameCadastroItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 300, 255));
 
+        jInternalFramePesquisarCategoria.setTitle("Pesquisar Categoria");
+        jInternalFramePesquisarCategoria.setMaximumSize(new java.awt.Dimension(430, 150));
+        jInternalFramePesquisarCategoria.setMinimumSize(new java.awt.Dimension(430, 150));
+        jInternalFramePesquisarCategoria.setPreferredSize(new java.awt.Dimension(430, 150));
+        jInternalFramePesquisarCategoria.setVisible(true);
+        jInternalFramePesquisarCategoria.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelPesquisarCategoriaNome.setText("Informe o Nome do Item:");
+        jInternalFramePesquisarCategoria.getContentPane().add(jLabelPesquisarCategoriaNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 9, -1, -1));
+        jInternalFramePesquisarCategoria.getContentPane().add(jTextFieldPesquisarCategoriaNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 6, 191, -1));
+
+        jButtonPesquisarCategoriaSalvar.setText("Pesquisar");
+        jButtonPesquisarCategoriaSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPesquisarCategoriaSalvarActionPerformed(evt);
+            }
+        });
+        jInternalFramePesquisarCategoria.getContentPane().add(jButtonPesquisarCategoriaSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 71, -1, -1));
+
+        jButtonPesquisarCategoriaCancelar.setText("Cancelar");
+        jButtonPesquisarCategoriaCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPesquisarCategoriaCancelarActionPerformed(evt);
+            }
+        });
+        jInternalFramePesquisarCategoria.getContentPane().add(jButtonPesquisarCategoriaCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 71, -1, -1));
+
+        jDesktopPaneControleDeEstoque.add(jInternalFramePesquisarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 430, 150));
+
         getContentPane().add(jDesktopPaneControleDeEstoque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 370));
 
         jMenuControleDeEstoqueCadastro.setText("Cadastro");
@@ -196,6 +231,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jMenuPesquisar.setText("Pesquisa");
 
         jMenuItemPesquisarCategoria.setText("Categoria");
+        jMenuItemPesquisarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPesquisarCategoriaActionPerformed(evt);
+            }
+        });
         jMenuPesquisar.add(jMenuItemPesquisarCategoria);
 
         jMenuItemPesquisarItem.setText("Item");
@@ -217,7 +257,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetCadastroItem();
         jInternalFrameCadastroItem.setVisible(false);
-        jTextFieldPesquisarNome.setText("");
+        jTextFieldPesquisarItemNome.setText("");
         jInternalFramePesquisarItem.setVisible(false);
         jInternalFrameCadastroCategoria.setVisible(true);
     }//GEN-LAST:event_jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed
@@ -226,7 +266,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTextFieldCadastroCategoriaNome.setText("");
         jInternalFrameCadastroCategoria.setVisible(false);
-        jTextFieldPesquisarNome.setText("");
+        jTextFieldPesquisarItemNome.setText("");
         jInternalFramePesquisarItem.setVisible(false);
         jInternalFrameCadastroItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemControleDeEstoqueCadastroItemActionPerformed
@@ -254,18 +294,18 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         validarCadastroItem();        
     }//GEN-LAST:event_jButtonCadastroItemSalvarActionPerformed
 
-    private void jButtonPesquisarSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarSalvarActionPerformed
+    private void jButtonPesquisarItemSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarItemSalvarActionPerformed
         // TODO add your handling code here:
-        System.out.println("Estou Pesquisando!!!");
-        jTextFieldPesquisarNome.setText("");
+        System.out.println("Pesquisando Item!!!");
+        jTextFieldPesquisarItemNome.setText("");
         jInternalFramePesquisarItem.setVisible(false);
-    }//GEN-LAST:event_jButtonPesquisarSalvarActionPerformed
+    }//GEN-LAST:event_jButtonPesquisarItemSalvarActionPerformed
 
-    private void jButtonPesquisarCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarCancelarActionPerformed
+    private void jButtonPesquisarItemCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarItemCancelarActionPerformed
         // TODO add your handling code here:
-        jTextFieldPesquisarNome.setText("");
+        jTextFieldPesquisarItemNome.setText("");
         jInternalFramePesquisarItem.setVisible(false);
-    }//GEN-LAST:event_jButtonPesquisarCancelarActionPerformed
+    }//GEN-LAST:event_jButtonPesquisarItemCancelarActionPerformed
 
     private void jMenuItemPesquisarItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPesquisarItemActionPerformed
         // TODO add your handling code here:
@@ -275,6 +315,31 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameCadastroItem.setVisible(false);
         jInternalFramePesquisarItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemPesquisarItemActionPerformed
+
+    private void jButtonPesquisarCategoriaSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarCategoriaSalvarActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Pesquisando Categoria!!!");
+        jTextFieldPesquisarCategoriaNome.setText("");
+        jInternalFramePesquisarCategoria.setVisible(false);
+    }//GEN-LAST:event_jButtonPesquisarCategoriaSalvarActionPerformed
+
+    private void jButtonPesquisarCategoriaCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisarCategoriaCancelarActionPerformed
+        // TODO add your handling code here:
+        jTextFieldPesquisarCategoriaNome.setText("");
+        jInternalFramePesquisarCategoria.setVisible(false);
+    }//GEN-LAST:event_jButtonPesquisarCategoriaCancelarActionPerformed
+
+    private void jMenuItemPesquisarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPesquisarCategoriaActionPerformed
+        // TODO add your handling code here:
+        jTextFieldPesquisarCategoriaNome.setText("");
+        jInternalFrameCadastroCategoria.setVisible(false);
+        resetCadastroItem();
+        jInternalFrameCadastroItem.setVisible(false);
+        jTextFieldPesquisarItemNome.setText("");
+        jInternalFramePesquisarItem.setVisible(false);
+        jInternalFramePesquisarCategoria.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemPesquisarCategoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -365,18 +430,22 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCadastroCategoriaSalvar;
     private javax.swing.JButton jButtonCadastroItemCancelar;
     private javax.swing.JButton jButtonCadastroItemSalvar;
-    private javax.swing.JButton jButtonPesquisarCancelar;
-    private javax.swing.JButton jButtonPesquisarSalvar;
+    private javax.swing.JButton jButtonPesquisarCategoriaCancelar;
+    private javax.swing.JButton jButtonPesquisarCategoriaSalvar;
+    private javax.swing.JButton jButtonPesquisarItemCancelar;
+    private javax.swing.JButton jButtonPesquisarItemSalvar;
     private javax.swing.JComboBox<String> jComboBoxCadastroItemCategoria;
     private javax.swing.JDesktopPane jDesktopPaneControleDeEstoque;
     private javax.swing.JInternalFrame jInternalFrameCadastroCategoria;
     private javax.swing.JInternalFrame jInternalFrameCadastroItem;
+    private javax.swing.JInternalFrame jInternalFramePesquisarCategoria;
     private javax.swing.JInternalFrame jInternalFramePesquisarItem;
     private javax.swing.JLabel jLabelCadastroCategoriaNome;
     private javax.swing.JLabel jLabelCadastroItemCategoria;
     private javax.swing.JLabel jLabelCadastroItemNome;
     private javax.swing.JLabel jLabelCadastroItemQuantidade;
-    private javax.swing.JLabel jLabelPesquisarNome;
+    private javax.swing.JLabel jLabelPesquisarCategoriaNome;
+    private javax.swing.JLabel jLabelPesquisarItemNome;
     private javax.swing.JMenuBar jMenuBarControleDeEstoque;
     private javax.swing.JMenu jMenuControleDeEstoqueCadastro;
     private javax.swing.JMenu jMenuControleDeEstoqueEdicao;
@@ -388,6 +457,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldCadastroCategoriaNome;
     private javax.swing.JTextField jTextFieldCadastroItemNome;
     private javax.swing.JTextField jTextFieldCadastroItemQuantidade;
-    private javax.swing.JTextField jTextFieldPesquisarNome;
+    private javax.swing.JTextField jTextFieldPesquisarCategoriaNome;
+    private javax.swing.JTextField jTextFieldPesquisarItemNome;
     // End of variables declaration//GEN-END:variables
 }

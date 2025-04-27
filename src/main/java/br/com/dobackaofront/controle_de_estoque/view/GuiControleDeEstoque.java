@@ -5,6 +5,7 @@
 package br.com.dobackaofront.controle_de_estoque.view;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -315,10 +316,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
         jDesktopPaneControleDeEstoque.add(jInternalFrameEdicaoCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 350, 170));
 
-        jInternalFrameApresentacao.setTitle("Relatório");
-        jInternalFrameApresentacao.setMaximumSize(new java.awt.Dimension(450, 350));
-        jInternalFrameApresentacao.setMinimumSize(new java.awt.Dimension(450, 350));
-        jInternalFrameApresentacao.setPreferredSize(new java.awt.Dimension(450, 350));
+        jInternalFrameApresentacao.setTitle("Apresentação de Pesquisa");
+        jInternalFrameApresentacao.setMaximumSize(new java.awt.Dimension(550, 350));
+        jInternalFrameApresentacao.setMinimumSize(new java.awt.Dimension(550, 350));
+        jInternalFrameApresentacao.setPreferredSize(new java.awt.Dimension(550, 350));
+        jInternalFrameApresentacao.setRequestFocusEnabled(false);
         jInternalFrameApresentacao.setVisible(true);
         jInternalFrameApresentacao.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -350,7 +352,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jLabelApresentacaoOpcao.setText("Opção:");
         jInternalFrameApresentacao.getContentPane().add(jLabelApresentacaoOpcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
-        jComboBoxApresentacaoOpcao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Editar", "Excluir" }));
+        jComboBoxApresentacaoOpcao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Editar", "Excluir", "Dispensação" }));
         jInternalFrameApresentacao.getContentPane().add(jComboBoxApresentacaoOpcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 160, -1));
 
         jButtonApresentacaoConfirmar.setText("Confirmar");
@@ -359,7 +361,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         ApresentacaoCancelar.setText("Cancelar");
         jInternalFrameApresentacao.getContentPane().add(ApresentacaoCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
 
-        jDesktopPaneControleDeEstoque.add(jInternalFrameApresentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 450, 350));
+        jDesktopPaneControleDeEstoque.add(jInternalFrameApresentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 550, 350));
 
         getContentPane().add(jDesktopPaneControleDeEstoque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 370));
 
@@ -446,6 +448,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jTextFieldEdicaoCategoriaId.setText("");
         jInternalFrameEdicaoCategoria.setVisible(false);
         
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
+        
         jInternalFrameCadastroCategoria.setVisible(true);
     }//GEN-LAST:event_jMenuItemControleDeEstoqueCadastroCategoriaActionPerformed
 
@@ -466,6 +474,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         
         resetCadastroItem();
         jInternalFrameCadastroCategoria.setVisible(false);
+        
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
         
         jInternalFrameCadastroItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemControleDeEstoqueCadastroItemActionPerformed
@@ -522,6 +536,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jTextFieldPesquisarCategoriaNome.setText("");
         jInternalFramePesquisarCategoria.setVisible(false); 
         
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
+        
         jInternalFramePesquisarItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemPesquisarItemActionPerformed
 
@@ -554,6 +574,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         
         resetEdicaoItem();
         jInternalFrameEdicaoItem.setVisible(false);
+        
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
         
         jInternalFramePesquisarCategoria.setVisible(true);      
         
@@ -592,6 +618,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jTextFieldCadastroCategoriaNome.setText("");
         jInternalFrameCadastroCategoria.setVisible(false);
         
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
+        
         jInternalFrameEdicaoCategoria.setVisible(true);
     }//GEN-LAST:event_jMenuItemEdicaoCategoriaActionPerformed
 
@@ -611,6 +643,12 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         
         jTextFieldEdicaoCategoriaNome.setText("");
         jInternalFrameEdicaoCategoria.setVisible(false);
+        
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel novoModelo = new DefaultTableModel();
+        jTableApresentacao.setModel(novoModelo);
+        jInternalFrameApresentacao.setVisible(false);
         
         jInternalFrameEdicaoItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemEdicaoItemActionPerformed

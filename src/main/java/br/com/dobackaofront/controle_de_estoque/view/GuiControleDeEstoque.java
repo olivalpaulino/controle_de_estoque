@@ -74,6 +74,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jButtonCadastroItemSalvar.setText("Salvar");
 
         jButtonCadastroItemCancelar.setText("Cancelar");
+        jButtonCadastroItemCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroItemCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrameCadastroItemLayout = new javax.swing.GroupLayout(jInternalFrameCadastroItem.getContentPane());
         jInternalFrameCadastroItem.getContentPane().setLayout(jInternalFrameCadastroItemLayout);
@@ -254,6 +259,14 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
         validarCadastroCategoria(nome);
     }//GEN-LAST:event_jButtonCadastroCategoriaSalvarActionPerformed
+
+    private void jButtonCadastroItemCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroItemCancelarActionPerformed
+        // TODO add your handling code here:
+        jTextFieldCadastroItemNome.setText("");
+        jTextFieldCadastroItemQuantidade.setText("");
+        jComboBoxCadastroItemCategoria.setSelectedIndex(0);
+        jInternalFrameCadastroItem.setVisible(false);
+    }//GEN-LAST:event_jButtonCadastroItemCancelarActionPerformed
 
     /**
      * @param args the command line arguments

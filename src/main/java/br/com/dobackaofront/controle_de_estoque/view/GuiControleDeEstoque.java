@@ -23,6 +23,7 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFramePesquisarCategoria.setVisible(false);
         jInternalFrameEdicaoItem.setVisible(false);
         jInternalFrameEdicaoCategoria.setVisible(false);
+        jInternalFrameApresentacao.setVisible(false);
     }
 
     /**
@@ -77,6 +78,15 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jButtonEdicaoCategoriaCancelar = new javax.swing.JButton();
         jLabelEdicaoCategoriaId = new javax.swing.JLabel();
         jTextFieldEdicaoCategoriaId = new javax.swing.JTextField();
+        jInternalFrameApresentacao = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableApresentacao = new javax.swing.JTable();
+        jLabelApresentacaoId = new javax.swing.JLabel();
+        jTextFieldApresentacaoId = new javax.swing.JTextField();
+        jLabelApresentacaoOpcao = new javax.swing.JLabel();
+        jComboBoxApresentacaoOpcao = new javax.swing.JComboBox<>();
+        jButtonApresentacaoConfirmar = new javax.swing.JButton();
+        ApresentacaoCancelar = new javax.swing.JButton();
         jMenuBarControleDeEstoque = new javax.swing.JMenuBar();
         jMenuControleDeEstoqueCadastro = new javax.swing.JMenu();
         jMenuItemControleDeEstoqueCadastroCategoria = new javax.swing.JMenuItem();
@@ -304,6 +314,52 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameEdicaoCategoria.getContentPane().add(jTextFieldEdicaoCategoriaId, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 90, -1));
 
         jDesktopPaneControleDeEstoque.add(jInternalFrameEdicaoCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 350, 170));
+
+        jInternalFrameApresentacao.setTitle("Relatório");
+        jInternalFrameApresentacao.setMaximumSize(new java.awt.Dimension(450, 350));
+        jInternalFrameApresentacao.setMinimumSize(new java.awt.Dimension(450, 350));
+        jInternalFrameApresentacao.setPreferredSize(new java.awt.Dimension(450, 350));
+        jInternalFrameApresentacao.setVisible(true);
+        jInternalFrameApresentacao.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTableApresentacao.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nome", "Quantidade", "Categoria"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableApresentacao);
+
+        jInternalFrameApresentacao.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 170));
+
+        jLabelApresentacaoId.setText("ID:");
+        jInternalFrameApresentacao.getContentPane().add(jLabelApresentacaoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        jTextFieldApresentacaoId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldApresentacaoIdActionPerformed(evt);
+            }
+        });
+        jInternalFrameApresentacao.getContentPane().add(jTextFieldApresentacaoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 110, -1));
+
+        jLabelApresentacaoOpcao.setText("Opção:");
+        jInternalFrameApresentacao.getContentPane().add(jLabelApresentacaoOpcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        jComboBoxApresentacaoOpcao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Editar", "Excluir" }));
+        jInternalFrameApresentacao.getContentPane().add(jComboBoxApresentacaoOpcao, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 160, -1));
+
+        jButtonApresentacaoConfirmar.setText("Confirmar");
+        jInternalFrameApresentacao.getContentPane().add(jButtonApresentacaoConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
+
+        ApresentacaoCancelar.setText("Cancelar");
+        jInternalFrameApresentacao.getContentPane().add(ApresentacaoCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
+
+        jDesktopPaneControleDeEstoque.add(jInternalFrameApresentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 450, 350));
 
         getContentPane().add(jDesktopPaneControleDeEstoque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 370));
 
@@ -559,6 +615,10 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameEdicaoItem.setVisible(true);
     }//GEN-LAST:event_jMenuItemEdicaoItemActionPerformed
 
+    private void jTextFieldApresentacaoIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldApresentacaoIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldApresentacaoIdActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -651,6 +711,8 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ApresentacaoCancelar;
+    private javax.swing.JButton jButtonApresentacaoConfirmar;
     private javax.swing.JButton jButtonCadastroCategoriaCancelar;
     private javax.swing.JButton jButtonCadastroCategoriaSalvar;
     private javax.swing.JButton jButtonCadastroItemCancelar;
@@ -663,15 +725,19 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JButton jButtonPesquisarCategoriaSalvar;
     private javax.swing.JButton jButtonPesquisarItemCancelar;
     private javax.swing.JButton jButtonPesquisarItemSalvar;
+    private javax.swing.JComboBox<String> jComboBoxApresentacaoOpcao;
     private javax.swing.JComboBox<String> jComboBoxCadastroItemCategoria;
     private javax.swing.JComboBox<String> jComboBoxEdicaoItemCategoria;
     private javax.swing.JDesktopPane jDesktopPaneControleDeEstoque;
+    private javax.swing.JInternalFrame jInternalFrameApresentacao;
     private javax.swing.JInternalFrame jInternalFrameCadastroCategoria;
     private javax.swing.JInternalFrame jInternalFrameCadastroItem;
     private javax.swing.JInternalFrame jInternalFrameEdicaoCategoria;
     private javax.swing.JInternalFrame jInternalFrameEdicaoItem;
     private javax.swing.JInternalFrame jInternalFramePesquisarCategoria;
     private javax.swing.JInternalFrame jInternalFramePesquisarItem;
+    private javax.swing.JLabel jLabelApresentacaoId;
+    private javax.swing.JLabel jLabelApresentacaoOpcao;
     private javax.swing.JLabel jLabelCadastroCategoriaNome;
     private javax.swing.JLabel jLabelCadastroItemCategoria;
     private javax.swing.JLabel jLabelCadastroItemNome;
@@ -694,6 +760,9 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemPesquisarCategoria;
     private javax.swing.JMenuItem jMenuItemPesquisarItem;
     private javax.swing.JMenu jMenuPesquisar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableApresentacao;
+    private javax.swing.JTextField jTextFieldApresentacaoId;
     private javax.swing.JTextField jTextFieldCadastroCategoriaNome;
     private javax.swing.JTextField jTextFieldCadastroItemNome;
     private javax.swing.JTextField jTextFieldCadastroItemQuantidade;

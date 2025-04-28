@@ -387,6 +387,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         jInternalFrameApresentacao.getContentPane().add(jButtonApresentacaoConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
 
         ApresentacaoCancelar.setText("Cancelar");
+        ApresentacaoCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApresentacaoCancelarActionPerformed(evt);
+            }
+        });
         jInternalFrameApresentacao.getContentPane().add(ApresentacaoCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
 
         jDesktopPaneControleDeEstoque.add(jInternalFrameApresentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 550, 350));
@@ -874,6 +879,11 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
                 } else if (opcao.equals("Excluir")) {
                     System.out.println("Excluir Item Informado");
                 } else if (opcao.equals("Dispensação")) {
+                    jTextFieldApresentacaoId.setText("");
+                    jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+                    DefaultTableModel model = new DefaultTableModel();
+                    jTableApresentacao.setModel(model);
+                    jInternalFrameApresentacao.setVisible(false);
                     jInternalFrameDispensacao.setVisible(true);
                 }
             } catch (Exception e) {
@@ -883,6 +893,15 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButtonApresentacaoConfirmarActionPerformed
+
+    private void ApresentacaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApresentacaoCancelarActionPerformed
+        // TODO add your handling code here:
+        jTextFieldApresentacaoId.setText("");
+        jComboBoxApresentacaoOpcao.setSelectedIndex(0);
+        DefaultTableModel model = new DefaultTableModel();
+        jTableApresentacao.setModel(model);
+        jInternalFrameApresentacao.setVisible(false);
+    }//GEN-LAST:event_ApresentacaoCancelarActionPerformed
 
     /**
      * @param args the command line arguments

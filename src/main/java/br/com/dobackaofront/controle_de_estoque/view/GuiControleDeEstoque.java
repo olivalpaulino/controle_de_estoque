@@ -4,6 +4,7 @@
  */
 package br.com.dobackaofront.controle_de_estoque.view;
 
+import java.time.LocalDateTime;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -770,15 +771,34 @@ public class GuiControleDeEstoque extends javax.swing.JFrame {
 
     private void jButtonDispensacaoConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDispensacaoConfirmarActionPerformed
         // TODO add your handling code here:
-        
+        int id = Integer.parseInt(jTextFieldDispensacaoId.getText());
         String nome = jTextFieldDispensacaoNome.getText();
         int quantidadeAtual = Integer.parseInt(jTextFieldDispensacaoQuantidadeAtual.getText());
+        
         String opcao = jComboBoxDispensacaoOpcao.getSelectedItem().toString();
-        int quantidadeAux = Integer.parseInt(jTextFieldDispensacaoQuantidadeAux.getText());
-        String data = jTextFieldDispensacaoData.getText();
-        String origemDestino = jTextFieldDispensacaoOrigemDestino.getText();
-        String responsavel = jTextFieldDispensacaoResponsavel.getText();
-        int id = Integer.parseInt(jTextFieldDispensacaoId.getText());
+        
+        String quantAux = jTextFieldDispensacaoQuantidadeAux.getText();
+        if (quantAux.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "O campo Quantidade está vazio!!");
+        } else {
+            try {
+                int quantidadeAux = Integer.parseInt(quantAux);
+                LocalDateTime data = LocalDateTime.now();
+                jTextFieldDispensacaoData.setText(data.toString());
+                
+                String origemDestino = jTextFieldDispensacaoOrigemDestino.getText();
+                if (origemDestino.equals("")) {
+                    JOptionPane.showMessageDialog(rootPane, "O campo Origem/Destino está vazio!!!");
+                } else {
+                    String responsavel = jTextFieldDispensacaoResponsavel.getText();
+                    if(responsavel.equals("")) {
+                        JOptionPane.showMessageDialog(rootPane, "O campo Responsável está vazio!!!");
+                    }
+                }
+            } catch(Exception e) {
+                JOptionPane.showMessageDialog(rootPane, "Informe apenas número no campo Quantidade!");
+            }
+        }
     }//GEN-LAST:event_jButtonDispensacaoConfirmarActionPerformed
 
     /**
